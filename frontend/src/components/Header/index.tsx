@@ -9,7 +9,7 @@ import { useState } from "react";
 import RegisterNewPetModal from "../RegisterNewPetModal";
 import iHeader from "./iHeader";
 
-export default function Header({ petsData, setFilteredPets }: iHeader) {
+export default function Header({ petsData, setFilteredPets, setIsFiltering }: iHeader) {
   const [modalOpen, setModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -27,6 +27,12 @@ export default function Header({ petsData, setFilteredPets }: iHeader) {
     const query = e.target.value;
     setSearchQuery(query);
     filterPets(query);
+
+    if (e.target.value.length != 0) {
+      setIsFiltering(true)
+    } else {
+      setIsFiltering(false)
+    }
   };
 
   const handleSearchClick = () => {
@@ -45,7 +51,6 @@ export default function Header({ petsData, setFilteredPets }: iHeader) {
           <Image src={search} alt="Search Icon" />
           <input
             type="text"
-            placeholder="Buscar pets..."
             value={searchQuery}
             onChange={handleInputChange}
           />

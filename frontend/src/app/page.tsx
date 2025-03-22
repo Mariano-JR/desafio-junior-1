@@ -9,6 +9,7 @@ import styles from "./page.module.css";
 export default function Home() {
   const [pets, setPets] = useState<iPet[]>([]);
   const [filteredPets, setFilteredPets] = useState<iPet[]>([]);
+  const [isFiltering, setIsFiltering] = useState(false);
 
   useEffect(() => {
     let isMounted = true;
@@ -35,8 +36,8 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <Header petsData={pets} setFilteredPets={setFilteredPets}/>
-      <Section pets={filteredPets.length === 0 ? pets : filteredPets} />
+      <Header petsData={pets} setFilteredPets={setFilteredPets} setIsFiltering={setIsFiltering} />
+      <Section pets={isFiltering ? filteredPets : pets} />
     </div>
   );
 }

@@ -42,7 +42,7 @@ git clone https://github.com/Mariano-JR/desafio-junior-1.git
    yarn start:dev
    ```
 
-   O servidor será iniciado em [http://localhost:3001](http://localhost:3001).
+   O servidor será iniciado em [http://localhost:3001](http://localhost:3001/api).
 
 ### 3. Configurar o Frontend
 
@@ -73,7 +73,7 @@ git clone https://github.com/Mariano-JR/desafio-junior-1.git
    - [http://localhost:3000](http://localhost:3000)
 
 2. Certifique-se de que o backend está funcionando corretamente:
-   - [http://localhost:3001](http://localhost:3001/pets)
+   - [http://localhost:3001/api](http://localhost:3001/api)
 
 ## Estrutura do Projeto
 
@@ -105,6 +105,7 @@ projeto/
   - [TypeORM](https://typeorm.io/): ORM para integração com bancos de dados.
   - [SQLite](https://www.sqlite.org/): Banco de dados relacional.
   - [Jest](https://jestjs.io/): Framework de testes.
+  - [Swagger](https://swagger.io/): Documentação da API.
 
 - **Frontend**:
   - [Next.js](https://nextjs.org/): Framework React para aplicações web modernas.

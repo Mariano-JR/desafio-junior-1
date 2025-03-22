@@ -42,7 +42,7 @@ npm run start:dev
 yarn start:dev
 ```
 
-O servidor será iniciado em [http://localhost:3001](http://localhost:3001).
+O servidor será iniciado em [http://localhost:3001](http://localhost:3001/api).
 
 ## Scripts Disponíveis
 
@@ -80,3 +80,4 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 - **[TypeORM](https://typeorm.io/):** ORM para integração com bancos de dados.
 - **[SQLite](https://www.sqlite.org/):** Banco de dados relacional utilizado no projeto.
 - **[Jest](https://jestjs.io/):** Framework de testes para garantir a qualidade do código.
+- **[Swagger](https://swagger.io/):** Documentação da API.
